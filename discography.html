@@ -3,16 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Glass Animals - Home</title>
+  <title>Glass Animals - Discography</title>
   <style>
-    :root {
-      --bg-dark: #0d0221;
-      --card-bg: #190a38;
-      --neon-pink: #ff2a85;
-      --electric-cyan: #00f0ff;
-      --text-color: #f0f0f0;
-      --accent-yellow: #ffe600;
-    }
+    :root { --bg-dark: #0d0221; --card-bg: #190a38; --neon-pink: #ff2a85; --electric-cyan: #00f0ff; --text-color: #f0f0f0; --accent-yellow: #ffe600; }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'Segoe UI', sans-serif; background: var(--bg-dark); color: var(--text-color); display: flex; flex-direction: column; min-height: 100vh; }
     header { background: rgba(13, 2, 33, 0.95); border-bottom: 2px solid var(--neon-pink); padding: 1rem 2rem; position: sticky; top: 0; }
@@ -22,9 +15,10 @@
     .nav-links a { color: var(--text-color); text-decoration: none; font-weight: 600; }
     .nav-links a:hover, .nav-links a.active { color: var(--neon-pink); }
     main { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; flex: 1; }
-    .hero { background: linear-gradient(135deg, #2a085c, var(--bg-dark)); border: 2px solid var(--electric-cyan); border-radius: 12px; text-align: center; padding: 4rem 1.5rem; }
-    .hero h1 { font-size: 2.8rem; color: var(--accent-yellow); margin-bottom: 0.5rem; }
-    .hero p { font-size: 1.2rem; color: var(--electric-cyan); }
+    h1 { color: var(--neon-pink); margin-bottom: 1.5rem; text-align: center; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .card { background: var(--card-bg); border: 1px solid var(--electric-cyan); border-radius: 8px; padding: 1.5rem; }
+    .card h3 { color: var(--accent-yellow); margin-bottom: 0.5rem; }
     footer { border-top: 1px solid var(--neon-pink); text-align: center; padding: 1.5rem; margin-top: auto; font-size: 0.9rem; color: #888; }
   </style>
 </head>
@@ -33,18 +27,33 @@
     <nav>
       <div class="logo">Glass Animals</div>
       <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="discography.html">Discography</a></li>
+        <li><a href="discography.html" class="active">Discography</a></li>
         <li><a href="tour.html">Tour</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
   <main>
-    <section class="hero">
-      <h1>Welcome to the Glass Animals Fan Hub</h1>
-      <p>Explore albums, band news, tour info, and interactive features!</p>
+    <h1>Discography</h1>
+    <section class="grid">
+      <div class="card">
+        <h3>ZABA (2014)</h3>
+        <p>Key Tracks: Gooey, Black Mambo, Pools</p>
+      </div>
+      <div class="card">
+        <h3>How To Be A Human Being (2016)</h3>
+        <p>Key Tracks: Life Itself, Youth, Pork Soda</p>
+      </div>
+      <div class="card">
+        <h3>Dreamland (2020)</h3>
+        <p>Key Tracks: Heat Waves, Tangerine, Space Ghost Coast To Coast</p>
+      </div>
+      <div class="card">
+        <h3>I Love You So F***ing Much (2024)</h3>
+        <p>Key Tracks: Creature in Heaven, A Tear in Space</p>
+      </div>
     </section>
   </main>
   <footer>
