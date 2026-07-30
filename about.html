@@ -4,21 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Glass Animals - About</title>
-  <style>
-    :root { --bg-dark: #0d0221; --card-bg: #190a38; --neon-pink: #ff2a85; --electric-cyan: #00f0ff; --text-color: #f0f0f0; --accent-yellow: #ffe600; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', sans-serif; background: var(--bg-dark); color: var(--text-color); display: flex; flex-direction: column; min-height: 100vh; }
-    header { background: rgba(13, 2, 33, 0.95); border-bottom: 2px solid var(--neon-pink); padding: 1rem 2rem; position: sticky; top: 0; }
-    nav { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: 0 auto; }
-    .logo { font-size: 1.5rem; font-weight: bold; color: var(--electric-cyan); text-transform: uppercase; letter-spacing: 2px; }
-    .nav-links { list-style: none; display: flex; gap: 20px; }
-    .nav-links a { color: var(--text-color); text-decoration: none; font-weight: 600; }
-    .nav-links a:hover, .nav-links a.active { color: var(--neon-pink); }
-    main { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; flex: 1; }
-    .content-box { background: var(--card-bg); border: 1px solid var(--electric-cyan); border-radius: 10px; padding: 2rem; margin-top: 1rem; }
-    h1 { color: var(--neon-pink); margin-bottom: 1rem; }
-    footer { border-top: 1px solid var(--neon-pink); text-align: center; padding: 1.5rem; margin-top: auto; font-size: 0.9rem; color: #888; }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
@@ -33,14 +19,24 @@
       </ul>
     </nav>
   </header>
+
   <main>
+    <h1 class="page-title">About the Band</h1>
     <div class="content-box">
-      <h1>About the Band</h1>
-      <p>Glass Animals are an English indie rock band formed in Oxford in 2010. Led by singer, songwriter, and producer Dave Bayley, the group also features Drew MacFarlane, Edmund Irwin-Singer, and Joe Seaward.</p>
+      <div style="display: flex; gap: 20px; flex-wrap: wrap; align-items: center;">
+        <img src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&w=500&q=80" alt="Band Performance" style="width: 100%; max-width: 350px; border-radius: 8px; border: 1px solid var(--electric-cyan);">
+        <div style="flex: 1; min-width: 250px;">
+          <h2 style="color: var(--electric-cyan); margin-bottom: 1rem;">Oxford to Global Soundscapes</h2>
+          <p>Glass Animals are an English indie rock band formed in Oxford in 2010. Led by singer, songwriter, and producer Dave Bayley, the group also features Drew MacFarlane, Edmund Irwin-Singer, and Joe Seaward.</p>
+          <br>
+          <p>Known for their psych-pop rhythms, narrative-driven lyrics, and energetic live shows, they burst into global stardom with hit singles like <em>Gooey</em> and <em>Heat Waves</em>.</p>
+        </div>
+      </div>
     </div>
   </main>
+
   <footer>
-    <p>&copy; 2026 Glass Animals Fan Site. Pushed to GitHub Source Control.</p>
+    <p>&copy; 2026 Glass Animals Fan Site. Final Web Project[cite: 1].</p>
   </footer>
 </body>
 </html>

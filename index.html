@@ -4,29 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Glass Animals - Home</title>
-  <style>
-    :root {
-      --bg-dark: #0d0221;
-      --card-bg: #190a38;
-      --neon-pink: #ff2a85;
-      --electric-cyan: #00f0ff;
-      --text-color: #f0f0f0;
-      --accent-yellow: #ffe600;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', sans-serif; background: var(--bg-dark); color: var(--text-color); display: flex; flex-direction: column; min-height: 100vh; }
-    header { background: rgba(13, 2, 33, 0.95); border-bottom: 2px solid var(--neon-pink); padding: 1rem 2rem; position: sticky; top: 0; }
-    nav { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: 0 auto; }
-    .logo { font-size: 1.5rem; font-weight: bold; color: var(--electric-cyan); text-transform: uppercase; letter-spacing: 2px; }
-    .nav-links { list-style: none; display: flex; gap: 20px; }
-    .nav-links a { color: var(--text-color); text-decoration: none; font-weight: 600; }
-    .nav-links a:hover, .nav-links a.active { color: var(--neon-pink); }
-    main { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; flex: 1; }
-    .hero { background: linear-gradient(135deg, #2a085c, var(--bg-dark)); border: 2px solid var(--electric-cyan); border-radius: 12px; text-align: center; padding: 4rem 1.5rem; }
-    .hero h1 { font-size: 2.8rem; color: var(--accent-yellow); margin-bottom: 0.5rem; }
-    .hero p { font-size: 1.2rem; color: var(--electric-cyan); }
-    footer { border-top: 1px solid var(--neon-pink); text-align: center; padding: 1.5rem; margin-top: auto; font-size: 0.9rem; color: #888; }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
@@ -41,14 +19,18 @@
       </ul>
     </nav>
   </header>
+
   <main>
     <section class="hero">
-      <h1>Welcome to the Glass Animals Fan Hub</h1>
-      <p>Explore albums, band news, tour info, and interactive features!</p>
+      <h1>Glass Animals Fan Hub</h1>
+      <p>Welcome to the ultimate fan site for Dreamland and beyond!</p>
+      <!-- Featured Band Image -->
+      <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80" alt="Live Music Stage" class="hero-img">
     </section>
   </main>
+
   <footer>
-    <p>&copy; 2026 Glass Animals Fan Site. Pushed to GitHub Source Control.</p>
+    <p>&copy; 2026 Glass Animals Fan Site. Final Web Project[cite: 1].</p>
   </footer>
 </body>
 </html>

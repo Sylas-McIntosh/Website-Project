@@ -4,23 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Glass Animals - Tour</title>
-  <style>
-    :root { --bg-dark: #0d0221; --card-bg: #190a38; --neon-pink: #ff2a85; --electric-cyan: #00f0ff; --text-color: #f0f0f0; --accent-yellow: #ffe600; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', sans-serif; background: var(--bg-dark); color: var(--text-color); display: flex; flex-direction: column; min-height: 100vh; }
-    header { background: rgba(13, 2, 33, 0.95); border-bottom: 2px solid var(--neon-pink); padding: 1rem 2rem; position: sticky; top: 0; }
-    nav { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: 0 auto; }
-    .logo { font-size: 1.5rem; font-weight: bold; color: var(--electric-cyan); text-transform: uppercase; letter-spacing: 2px; }
-    .nav-links { list-style: none; display: flex; gap: 20px; }
-    .nav-links a { color: var(--text-color); text-decoration: none; font-weight: 600; }
-    .nav-links a:hover, .nav-links a.active { color: var(--neon-pink); }
-    main { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; flex: 1; }
-    h1 { color: var(--neon-pink); margin-bottom: 1.5rem; }
-    .tour-list { list-style: none; }
-    .tour-item { background: var(--card-bg); border-left: 4px solid var(--accent-yellow); padding: 1rem; margin-bottom: 1rem; display: flex; justify-content: space-between; align-items: center; }
-    .tour-date { color: var(--electric-cyan); font-weight: bold; }
-    footer { border-top: 1px solid var(--neon-pink); text-align: center; padding: 1.5rem; margin-top: auto; font-size: 0.9rem; color: #888; }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
@@ -35,31 +19,41 @@
       </ul>
     </nav>
   </header>
+
   <main>
-    <h1>Upcoming Tour Dates</h1>
-    <ul class="tour-list">
-      <li class="tour-item">
-        <div>
-          <span class="tour-date">AUG 12</span> - Red Rocks Amphitheatre
+    <h1 class="page-title">Tour Dates</h1>
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=500&q=80" alt="Concert Stage">
+        <div class="card-content">
+          <h3>AUG 12 - Morrison, CO</h3>
+          <p>Red Rocks Amphitheatre</p>
+          <button style="margin-top: 10px;">Get Tickets</button>
         </div>
-        <span>Morrison, CO</span>
-      </li>
-      <li class="tour-item">
-        <div>
-          <span class="tour-date">AUG 18</span> - Madison Square Garden
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?auto=format&fit=crop&w=500&q=80" alt="Live Lights">
+        <div class="card-content">
+          <h3>AUG 18 - New York, NY</h3>
+          <p>Madison Square Garden</p>
+          <button style="margin-top: 10px;">Get Tickets</button>
         </div>
-        <span>New York, NY</span>
-      </li>
-      <li class="tour-item">
-        <div>
-          <span class="tour-date">AUG 25</span> - The Forum
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?auto=format&fit=crop&w=500&q=80" alt="Concert Crowd">
+        <div class="card-content">
+          <h3>AUG 25 - Los Angeles, CA</h3>
+          <p>The Forum</p>
+          <button style="margin-top: 10px;">Get Tickets</button>
         </div>
-        <span>Los Angeles, CA</span>
-      </li>
-    </ul>
+      </div>
+    </div>
   </main>
+
   <footer>
-    <p>&copy; 2026 Glass Animals Fan Site. Pushed to GitHub Source Control.</p>
+    <p>&copy; 2026 Glass Animals Fan Site. Final Web Project[cite: 1].</p>
   </footer>
 </body>
 </html>

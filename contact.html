@@ -4,23 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Glass Animals - Contact</title>
-  <style>
-    :root { --bg-dark: #0d0221; --card-bg: #190a38; --neon-pink: #ff2a85; --electric-cyan: #00f0ff; --text-color: #f0f0f0; --accent-yellow: #ffe600; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', sans-serif; background: var(--bg-dark); color: var(--text-color); display: flex; flex-direction: column; min-height: 100vh; }
-    header { background: rgba(13, 2, 33, 0.95); border-bottom: 2px solid var(--neon-pink); padding: 1rem 2rem; position: sticky; top: 0; }
-    nav { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: 0 auto; }
-    .logo { font-size: 1.5rem; font-weight: bold; color: var(--electric-cyan); text-transform: uppercase; letter-spacing: 2px; }
-    .nav-links { list-style: none; display: flex; gap: 20px; }
-    .nav-links a { color: var(--text-color); text-decoration: none; font-weight: 600; }
-    .nav-links a:hover, .nav-links a.active { color: var(--neon-pink); }
-    main { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; flex: 1; }
-    h1 { color: var(--neon-pink); margin-bottom: 1.5rem; }
-    form { background: var(--card-bg); padding: 2rem; border-radius: 8px; border: 1px solid var(--electric-cyan); display: flex; flex-direction: column; gap: 15px; max-width: 600px; }
-    input, textarea { padding: 0.8rem; border-radius: 4px; border: 1px solid var(--electric-cyan); background: var(--bg-dark); color: white; font-size: 1rem; }
-    button { background: var(--neon-pink); color: white; border: none; padding: 0.8rem; border-radius: 4px; font-weight: bold; cursor: pointer; }
-    footer { border-top: 1px solid var(--neon-pink); text-align: center; padding: 1.5rem; margin-top: auto; font-size: 0.9rem; color: #888; }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
@@ -35,17 +19,25 @@
       </ul>
     </nav>
   </header>
+
   <main>
-    <h1>Join the Fan Club</h1>
-    <form onsubmit="event.preventDefault(); alert('Message sent!');">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea rows="5" placeholder="Favorite Song or Message" required></textarea>
-      <button type="submit">Send Message</button>
+    <h1 class="page-title">Join the Fan Club</h1>
+    <form onsubmit="event.preventDefault(); alert('Thanks for joining the Fan Club!');">
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Your Name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Your Email" required>
+
+      <label for="message">Favorite Song / Message</label>
+      <textarea id="message" rows="5" placeholder="Tell us your favorite track..." required></textarea>
+
+      <button type="submit">Submit</button>
     </form>
   </main>
+
   <footer>
-    <p>&copy; 2026 Glass Animals Fan Site. Pushed to GitHub Source Control.</p>
+    <p>&copy; 2026 Glass Animals Fan Site. Final Web Project[cite: 1].</p>
   </footer>
 </body>
 </html>
