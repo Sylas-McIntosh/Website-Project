@@ -5,6 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Glass Animals - Discography</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Discography Specific Styles */
+    .album-detail {
+      background: var(--card-bg);
+      border: 1px solid var(--electric-cyan);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      box-shadow: var(--border-glow);
+    }
+
+    .album-cover {
+      width: 100%;
+      border-radius: 8px;
+      border: 2px solid var(--neon-pink);
+    }
+
+    .album-info h2 {
+      color: var(--accent-yellow);
+      margin-bottom: 0.3rem;
+    }
+
+    .album-meta {
+      color: var(--electric-cyan);
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .tracklist {
+      list-style-position: inside;
+      margin-top: 1rem;
+    }
+
+    .tracklist li {
+      padding: 0.3rem 0;
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+    }
+
+    .audio-preview {
+      margin-top: 1rem;
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -21,39 +67,74 @@
   </header>
 
   <main>
-    <h1 class="page-title">Studio Albums</h1>
-    <section class="grid">
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=500&q=80" alt="ZABA Album Vibe">
-        <div class="card-content">
-          <h3>ZABA (2014)</h3>
-          <p>Atmospheric jungle textures and deep basslines featuring <em>Gooey</em> and <em>Black Mambo</em>.</p>
-        </div>
-      </article>
+    <h1 class="page-title">Complete Discography</h1>
 
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=500&q=80" alt="How To Be A Human Being Album Vibe">
-        <div class="card-content">
-          <h3>How To Be A Human Being (2016)</h3>
-          <p>A character-driven concept record with energetic tracks like <em>Life Itself</em> and <em>Pork Soda</em>.</p>
-        </div>
-      </article>
+    <!-- Album 1 -->
+    <section class="album-detail">
+      <img src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=600&q=80" alt="ZABA Cover" class="album-cover">
+      <div class="album-info">
+        <h2>ZABA</h2>
+        <p class="album-meta">Released: June 2014 | Genre: Psychedelic Pop / Trip-Hop</p>
+        <p>A lush, jungle-inspired sonic trip filled with organic percussion and dark atmospheric basslines.</p>
+        <h3 style="color: var(--neon-pink); margin-top: 1rem;">Highlight Tracks:</h3>
+        <ol class="tracklist">
+          <li>Gooey</li>
+          <li>Black Mambo</li>
+          <li>Pools</li>
+          <li>Toes</li>
+        </ol>
+      </div>
+    </section>
 
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=500&q=80" alt="Dreamland Album Vibe">
-        <div class="card-content">
-          <h3>Dreamland (2020)</h3>
-          <p>A nostalgic 90s pop-infused masterpiece featuring the record-breaking <em>Heat Waves</em>.</p>
-        </div>
-      </article>
+    <!-- Album 2 -->
+    <section class="album-detail">
+      <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80" alt="HTBAHB Cover" class="album-cover">
+      <div class="album-info">
+        <h2>How To Be A Human Being</h2>
+        <p class="album-meta">Released: August 2016 | Genre: Indie Pop / Art Pop</p>
+        <p>A character-driven concept record where every song represents a different person based on real conversations recorded on tour.</p>
+        <h3 style="color: var(--neon-pink); margin-top: 1rem;">Highlight Tracks:</h3>
+        <ol class="tracklist">
+          <li>Life Itself</li>
+          <li>Youth</li>
+          <li>Pork Soda</li>
+          <li>Season 2 Episode 3</li>
+        </ol>
+      </div>
+    </section>
 
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=500&q=80" alt="Space Album Vibe">
-        <div class="card-content">
-          <h3>I Love You So F***ing Much (2024)</h3>
-          <p>Cosmic soundscapes exploring love and existential themes with <em>Creature in Heaven</em>.</p>
-        </div>
-      </article>
+    <!-- Album 3 -->
+    <section class="album-detail">
+      <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=600&q=80" alt="Dreamland Cover" class="album-cover">
+      <div class="album-info">
+        <h2>Dreamland</h2>
+        <p class="album-meta">Released: August 2020 | Genre: Synth-Pop / Vaporwave</p>
+        <p>A deeply personal, nostalgic trip through 90s memories, home video audio snippets, and neon pop hooks.</p>
+        <h3 style="color: var(--neon-pink); margin-top: 1rem;">Highlight Tracks:</h3>
+        <ol class="tracklist">
+          <li>Heat Waves</li>
+          <li>Tangerine</li>
+          <li>Space Ghost Coast To Coast</li>
+          <li>DejÀ Vu</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Album 4 -->
+    <section class="album-detail">
+      <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=600&q=80" alt="ILYSFM Cover" class="album-cover">
+      <div class="album-info">
+        <h2>I Love You So F***ing Much</h2>
+        <p class="album-meta">Released: July 2024 | Genre: Cosmic Pop / Space Rock</p>
+        <p>An existential exploration of love and scale set against vast galactic soundscapes.</p>
+        <h3 style="color: var(--neon-pink); margin-top: 1rem;">Highlight Tracks:</h3>
+        <ol class="tracklist">
+          <li>Creature in Heaven</li>
+          <li>A Tear in Space (Airlock)</li>
+          <li>Show Pony</li>
+          <li>On the Run</li>
+        </ol>
+      </div>
     </section>
   </main>
 

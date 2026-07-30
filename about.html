@@ -5,6 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Glass Animals - About</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* About Page Specific Styles */
+    .bio-hero {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+
+    .bio-img {
+      width: 100%;
+      border-radius: 12px;
+      border: 2px solid var(--electric-cyan);
+      box-shadow: var(--border-glow);
+    }
+
+    .member-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-bottom: 3rem;
+    }
+
+    .member-card {
+      background: var(--card-bg);
+      border: 1px solid var(--neon-pink);
+      border-radius: 10px;
+      padding: 1.5rem;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .member-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .member-card h3 {
+      color: var(--accent-yellow);
+      margin-bottom: 0.3rem;
+    }
+
+    .member-card span {
+      color: var(--electric-cyan);
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 2rem;
+    }
+
+    .timeline-item {
+      background: var(--card-bg);
+      border-left: 4px solid var(--electric-cyan);
+      padding: 1.2rem;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .timeline-item .year {
+      color: var(--neon-pink);
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -21,18 +89,64 @@
   </header>
 
   <main>
-    <h1 class="page-title">About the Band</h1>
-    <div class="content-box">
-      <div style="display: flex; gap: 20px; flex-wrap: wrap; align-items: center;">
-        <img src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&w=500&q=80" alt="Band Performance" style="width: 100%; max-width: 350px; border-radius: 8px; border: 1px solid var(--electric-cyan);">
-        <div style="flex: 1; min-width: 250px;">
-          <h2 style="color: var(--electric-cyan); margin-bottom: 1rem;">Oxford to Global Soundscapes</h2>
-          <p>Glass Animals are an English indie rock band formed in Oxford in 2010. Led by singer, songwriter, and producer Dave Bayley, the group also features Drew MacFarlane, Edmund Irwin-Singer, and Joe Seaward.</p>
-          <br>
-          <p>Known for their psych-pop rhythms, narrative-driven lyrics, and energetic live shows, they burst into global stardom with hit singles like <em>Gooey</em> and <em>Heat Waves</em>.</p>
-        </div>
+    <h1 class="page-title">Behind the Sound</h1>
+
+    <!-- Bio Section -->
+    <section class="bio-hero">
+      <img src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&w=800&q=80" alt="Band Performance" class="bio-img">
+      <div class="content-box">
+        <h2 style="color: var(--neon-pink); margin-bottom: 1rem;">Oxford to Global Soundscapes</h2>
+        <p>Formed in Oxford in 2010, Glass Animals are an English indie-pop band known for their atmospheric, genre-blending soundscapes, hypnotic rhythms, and vivid storytelling.</p>
+        <br>
+        <p>Frontman Dave Bayley writes, produces, and designs much of the group's visual aesthetic, turning personal memories, electronic textures, and hip-hop influences into multi-platinum records enjoyed across the globe.</p>
       </div>
-    </div>
+    </section>
+
+    <!-- Band Members -->
+    <h1 class="page-title">Band Members</h1>
+    <section class="member-grid">
+      <div class="member-card">
+        <h3>Dave Bayley</h3>
+        <span>Lead Vocals / Guitar / Producer</span>
+      </div>
+      <div class="member-card">
+        <h3>Drew MacFarlane</h3>
+        <span>Guitar / Keys / Backing Vocals</span>
+      </div>
+      <div class="member-card">
+        <h3>Edmund Irwin-Singer</h3>
+        <span>Bass / Keys / Backing Vocals</span>
+      </div>
+      <div class="member-card">
+        <h3>Joe Seaward</h3>
+        <span>Drums / Percussion</span>
+      </div>
+    </section>
+
+    <!-- Band History Timeline -->
+    <h1 class="page-title">Key Milestones</h1>
+    <section class="timeline">
+      <div class="timeline-item">
+        <span class="year">2010</span>
+        <h3>Formation in Oxford</h3>
+        <p>School friends come together to record their earliest bedroom demos, creating their signature tropical-electronic vibe.</p>
+      </div>
+      <div class="timeline-item">
+        <span class="year">2014</span>
+        <h3>Debut Album: ZABA</h3>
+        <p>Breakthrough release featuring the viral hit <em>Gooey</em>, earning them critical acclaim and international festival spots.</p>
+      </div>
+      <div class="timeline-item">
+        <span class="year">2021-2022</span>
+        <h3>Historic Billboard Run</h3>
+        <p><em>Heat Waves</em> reaches #1 on the Billboard Hot 100, breaking records for the longest climb to the top spot in chart history.</p>
+      </div>
+      <div class="timeline-item">
+        <span class="year">2024</span>
+        <h3>Cosmic Evolution</h3>
+        <p>Release of <em>I Love You So F***ing Much</em>, launching a new era of space-inspired themes and arena tours.</p>
+      </div>
+    </section>
   </main>
 
   <footer>

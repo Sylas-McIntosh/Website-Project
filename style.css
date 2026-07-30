@@ -1,4 +1,6 @@
-/* Glass Animals Color Palette & Theme */
+/* ==========================================================================
+   Glass Animals Color Palette & Variables
+   ========================================================================== */
 :root {
   --bg-dark: #0a021a;
   --card-bg: rgba(25, 10, 56, 0.85);
@@ -9,6 +11,9 @@
   --border-glow: 0 0 15px rgba(0, 240, 255, 0.3);
 }
 
+/* ==========================================================================
+   Base & Reset Styles
+   ========================================================================== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -25,7 +30,9 @@ body {
   line-height: 1.6;
 }
 
-/* Header & Navigation */
+/* ==========================================================================
+   Header & Navigation
+   ========================================================================== */
 header {
   background: rgba(10, 2, 26, 0.95);
   border-bottom: 2px solid var(--neon-pink);
@@ -68,13 +75,16 @@ nav {
   border-radius: 4px;
 }
 
-.nav-links a:hover, .nav-links a.active {
+.nav-links a:hover, 
+.nav-links a.active {
   color: var(--neon-pink);
   text-shadow: 0 0 8px var(--neon-pink);
   border-bottom: 2px solid var(--neon-pink);
 }
 
-/* Container */
+/* ==========================================================================
+   Main Layout & Headings
+   ========================================================================== */
 main {
   max-width: 1100px;
   margin: 2rem auto;
@@ -83,35 +93,36 @@ main {
   width: 100%;
 }
 
-/* Page Titles */
 h1.page-title {
   color: var(--neon-pink);
   text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2.5rem;
+  margin: 2.5rem 0 1.5rem 0;
+  font-size: 2.3rem;
   text-shadow: 0 0 12px var(--neon-pink);
 }
 
-/* Hero Section */
+/* ==========================================================================
+   Hero & Feature Cards
+   ========================================================================== */
 .hero {
   background: linear-gradient(135deg, #2a085c, var(--bg-dark));
   border: 2px solid var(--electric-cyan);
   border-radius: 12px;
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 3.5rem 2rem;
   box-shadow: var(--border-glow);
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 2.8rem;
   color: var(--accent-yellow);
   text-shadow: 0 0 12px var(--accent-yellow);
   margin-bottom: 0.5rem;
 }
 
 .hero p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: var(--electric-cyan);
   margin-bottom: 1.5rem;
 }
@@ -123,10 +134,21 @@ h1.page-title {
   border-radius: 8px;
   border: 2px solid var(--neon-pink);
   box-shadow: 0 0 15px rgba(255, 42, 133, 0.4);
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 
-/* Card & Grid Layouts */
+/* Common Content Box */
+.content-box {
+  background: var(--card-bg);
+  border: 1px solid var(--electric-cyan);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: var(--border-glow);
+}
+
+/* ==========================================================================
+   Grid System & Cards
+   ========================================================================== */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -164,45 +186,11 @@ h1.page-title {
   margin-bottom: 0.5rem;
 }
 
-/* Interactive & Content Boxes */
-.content-box {
-  background: var(--card-bg);
-  border: 1px solid var(--electric-cyan);
-  border-radius: 10px;
-  padding: 2rem;
-  box-shadow: var(--border-glow);
-}
-
-/* Form Styles */
-form {
-  background: var(--card-bg);
-  padding: 2rem;
-  border-radius: 10px;
-  border: 1px solid var(--electric-cyan);
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 600px;
-  margin: 0 auto;
-  box-shadow: var(--border-glow);
-}
-
-input, textarea {
-  padding: 0.8rem;
-  border-radius: 6px;
-  border: 1px solid var(--electric-cyan);
-  background: rgba(10, 2, 26, 0.8);
-  color: white;
-  font-size: 1rem;
-}
-
-input:focus, textarea:focus {
-  outline: none;
-  border-color: var(--neon-pink);
-  box-shadow: 0 0 8px var(--neon-pink);
-}
-
-button {
+/* ==========================================================================
+   Interactive Components (Buttons, Videos, Lyrics)
+   ========================================================================== */
+button, .ticket-btn {
+  display: inline-block;
   background: var(--neon-pink);
   color: white;
   border: none;
@@ -211,16 +199,265 @@ button {
   font-weight: bold;
   font-size: 1rem;
   cursor: pointer;
+  text-decoration: none;
   transition: transform 0.2s, background-color 0.2s;
   box-shadow: 0 0 10px var(--neon-pink);
 }
 
-button:hover {
-  transform: scale(1.03);
-  background: #e01f73;
+button:hover, .ticket-btn:hover {
+  transform: scale(1.04);
+  background-color: #e01f73;
 }
 
-/* Footer */
+.feature-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 2.5rem;
+  align-items: center;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 2px solid var(--electric-cyan);
+  box-shadow: var(--border-glow);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.lyric-box {
+  background: var(--card-bg);
+  border: 2px dashed var(--accent-yellow);
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.lyric-box h2 {
+  color: var(--accent-yellow);
+  margin-bottom: 0.5rem;
+}
+
+#lyricDisplay {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--electric-cyan);
+  margin: 1.5rem 0;
+  min-height: 2.5em;
+}
+
+/* ==========================================================================
+   News Feed & Timelines
+   ========================================================================== */
+.news-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 2rem;
+}
+
+.news-card {
+  background: var(--card-bg);
+  border-left: 4px solid var(--neon-pink);
+  padding: 1.5rem;
+  border-radius: 0 8px 8px 0;
+}
+
+.news-card .date {
+  color: var(--electric-cyan);
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.news-card h3 {
+  color: var(--text-color);
+  margin: 0.3rem 0;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 2rem;
+}
+
+.timeline-item {
+  background: var(--card-bg);
+  border-left: 4px solid var(--electric-cyan);
+  padding: 1.2rem;
+  border-radius: 0 8px 8px 0;
+}
+
+.timeline-item .year {
+  color: var(--neon-pink);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* ==========================================================================
+   About Page Specifics
+   ========================================================================== */
+.bio-hero {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.bio-img {
+  width: 100%;
+  border-radius: 12px;
+  border: 2px solid var(--electric-cyan);
+  box-shadow: var(--border-glow);
+}
+
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 3rem;
+}
+
+.member-card {
+  background: var(--card-bg);
+  border: 1px solid var(--neon-pink);
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+}
+
+.member-card h3 {
+  color: var(--accent-yellow);
+  margin-bottom: 0.3rem;
+}
+
+.member-card span {
+  color: var(--electric-cyan);
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* ==========================================================================
+   Discography Specifics
+   ========================================================================== */
+.album-detail {
+  background: var(--card-bg);
+  border: 1px solid var(--electric-cyan);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  box-shadow: var(--border-glow);
+}
+
+.album-cover {
+  width: 100%;
+  border-radius: 8px;
+  border: 2px solid var(--neon-pink);
+}
+
+.album-info h2 {
+  color: var(--accent-yellow);
+  margin-bottom: 0.3rem;
+}
+
+.album-meta {
+  color: var(--electric-cyan);
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.tracklist {
+  list-style-position: inside;
+  margin-top: 1rem;
+}
+
+.tracklist li {
+  padding: 0.3rem 0;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+/* ==========================================================================
+   Contact Page & Form Inputs
+   ========================================================================== */
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 3rem;
+}
+
+.form-box {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid var(--electric-cyan);
+  box-shadow: var(--border-glow);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  color: var(--electric-cyan);
+  font-weight: bold;
+}
+
+input, textarea, select {
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: 1px solid var(--electric-cyan);
+  background: rgba(10, 2, 26, 0.9);
+  color: white;
+  font-size: 1rem;
+  width: 100%;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--neon-pink);
+  box-shadow: 0 0 8px var(--neon-pink);
+}
+
+#confirmationMsg {
+  display: none;
+  background: rgba(0, 240, 255, 0.1);
+  border: 1px solid var(--electric-cyan);
+  color: var(--accent-yellow);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
 footer {
   background: rgba(10, 2, 26, 0.95);
   border-top: 1px solid var(--neon-pink);
