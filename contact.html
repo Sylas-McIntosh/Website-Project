@@ -3,58 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Glass Animals - Contact</title>
+  <meta name="description" content="Sign up for the official Glass Animals Fan Club and get presale announcements and band news directly.">
+  <meta name="keywords" content="Glass Animals Fan Club, Sign Up, Contact, Band Links">
+  <meta name="author" content="Sylas McIntosh">
+  <title>Glass Animals - Contact & Fan Club</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* Contact Page Specific Layout */
-    .contact-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      margin-bottom: 3rem;
-    }
-
-    .form-box {
-      background: var(--card-bg);
-      padding: 2rem;
-      border-radius: 10px;
-      border: 1px solid var(--electric-cyan);
-      box-shadow: var(--border-glow);
-    }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-      margin-bottom: 1.2rem;
-    }
-
-    .form-group label {
-      color: var(--electric-cyan);
-      font-weight: bold;
-    }
-
-    select {
-      padding: 0.8rem;
-      border-radius: 6px;
-      border: 1px solid var(--electric-cyan);
-      background: rgba(10, 2, 26, 0.9);
-      color: white;
-      font-size: 1rem;
-    }
-
-    #confirmationMsg {
-      display: none;
-      background: rgba(0, 240, 255, 0.1);
-      border: 1px solid var(--electric-cyan);
-      color: var(--accent-yellow);
-      padding: 1rem;
-      border-radius: 8px;
-      text-align: center;
-      margin-top: 1rem;
-      font-weight: bold;
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -74,7 +27,6 @@
     <h1 class="page-title">Connect & Join</h1>
 
     <div class="contact-container">
-      <!-- Fan Club Form -->
       <section class="form-box">
         <h2 style="color: var(--neon-pink); margin-bottom: 1rem;">Join the Fan Club</h2>
         <form id="fanForm">
@@ -111,15 +63,13 @@
         </div>
       </section>
 
-      <!-- Side Info Box -->
       <section class="content-box" style="display: flex; flex-direction: column; justify-content: center;">
-        <h2 style="color: var(--accent-yellow); margin-bottom: 1rem;">Official Fan Links</h2>
+        <h2 style="color: var(--accent-yellow); margin-bottom: 1rem;">Official External Links</h2>
         <p>Stay updated with official band releases, merch drops, and VIP presale codes across their official channels:</p>
         <ul style="list-style: none; margin-top: 1.5rem; display: flex; flex-direction: column; gap: 12px;">
-          <li>🌐 <strong>Official Site:</strong> glassanimals.com</li>
-          <li>🎵 <strong>Spotify:</strong> Glass Animals</li>
-          <li>📸 <strong>Instagram:</strong> @glassanimals</li>
-          <li>🎥 <strong>YouTube:</strong> Glass Animals Channel</li>
+          <li>🌐 <a href="https://www.glassanimals.com" target="_blank" rel="noopener noreferrer" style="color: var(--electric-cyan);">Official Website</a></li>
+          <li>🎵 <a href="https://open.spotify.com/artist/4W3E1_05x22" target="_blank" rel="noopener noreferrer" style="color: var(--electric-cyan);">Glass Animals on Spotify</a></li>
+          <li>🎟️ <a href="https://www.ticketmaster.com/glass-animals-tickets/artist/1916866" target="_blank" rel="noopener noreferrer" style="color: var(--electric-cyan);">Ticketmaster Storefront</a></li>
         </ul>
       </section>
     </div>
@@ -129,15 +79,12 @@
     <p>&copy; 2026 Glass Animals Fan Site. Final Web Project[cite: 1].</p>
   </footer>
 
-  <!-- Form Interactivity JS -->
   <script>
     const fanForm = document.getElementById('fanForm');
     const confirmationMsg = document.getElementById('confirmationMsg');
 
     fanForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      
-      // Hide form smoothly and display confirmation
       fanForm.style.display = 'none';
       confirmationMsg.style.display = 'block';
     });

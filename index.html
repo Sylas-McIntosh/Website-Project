@@ -3,83 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Glass Animals - Home</title>
+  <meta name="description" content="Official Fan Site for Glass Animals. Explore music, tour dates, band history, and interactive lyrics.">
+  <meta name="keywords" content="Glass Animals, Heat Waves, Dreamland, Indie Pop, Band, Tour Dates">
+  <meta name="author" content="Sylas McIntosh">
+  <title>Glass Animals - Official Fan Hub</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* Homepage Specific Layouts */
-    .feature-section {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      margin-bottom: 3rem;
-      align-items: center;
-    }
-
-    .video-container {
-      position: relative;
-      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-      height: 0;
-      overflow: hidden;
-      border-radius: 10px;
-      border: 2px solid var(--electric-cyan);
-      box-shadow: var(--border-glow);
-    }
-
-    .video-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-
-    .lyric-box {
-      background: var(--card-bg);
-      border: 2px dashed var(--accent-yellow);
-      border-radius: 10px;
-      padding: 2rem;
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-
-    .lyric-box h2 {
-      color: var(--accent-yellow);
-      margin-bottom: 0.5rem;
-    }
-
-    #lyricDisplay {
-      font-size: 1.2rem;
-      font-style: italic;
-      color: var(--electric-cyan);
-      margin: 1.5rem 0;
-      min-height: 2.5em;
-    }
-
-    .news-feed {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .news-card {
-      background: var(--card-bg);
-      border-left: 4px solid var(--neon-pink);
-      padding: 1.5rem;
-      border-radius: 0 8px 8px 0;
-    }
-
-    .news-card .date {
-      color: var(--electric-cyan);
-      font-size: 0.85rem;
-      font-weight: bold;
-    }
-
-    .news-card h3 {
-      color: var(--text-color);
-      margin: 0.3rem 0;
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -96,21 +24,18 @@
   </header>
 
   <main>
-    <!-- Hero Banner -->
     <section class="hero">
       <h1>Glass Animals Fan Hub</h1>
       <p>Welcome to the ultimate fan site for Dreamland and beyond!</p>
-      <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80" alt="Live Music Stage" class="hero-img">
+      <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80" alt="Live Music Stage with Neon Lights" class="hero-img">
     </section>
 
-    <!-- Featured Track & Video Section -->
     <h1 class="page-title">Featured Single</h1>
     <section class="feature-section">
       <div class="video-container">
-        <!-- YouTube Embed for Heat Waves -->
         <iframe 
           src="https://www.youtube-nocookie.com/embed/mRD0-GxqHVo" 
-          title="Glass Animals - Heat Waves" 
+          title="Glass Animals - Heat Waves Official Video" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
           allowfullscreen>
         </iframe>
@@ -118,11 +43,10 @@
       <div class="content-box">
         <h2 style="color: var(--neon-pink); margin-bottom: 0.5rem;">"Heat Waves"</h2>
         <p style="color: var(--electric-cyan); font-weight: bold; margin-bottom: 1rem;">Album: Dreamland (2020)</p>
-        <p>The record-breaking global hit that topped the Billboard Hot 100 for weeks. Written entirely by Dave Bayley, this track blends nostalgic synth-pop with hypnotic beats.</p>
+        <p>The record-breaking global hit that topped the Billboard Hot 100. Written and produced by Dave Bayley, this track blends nostalgic synth-pop with hypnotic beats.</p>
       </div>
     </section>
 
-    <!-- Interactive Lyric Generator -->
     <section class="lyric-box">
       <h2>Random Lyric Generator</h2>
       <p>Click the button to generate a random Glass Animals lyric!</p>
@@ -130,7 +54,6 @@
       <button id="lyricBtn">Get New Lyric</button>
     </section>
 
-    <!-- Latest News Feed -->
     <h1 class="page-title">Latest Updates</h1>
     <section class="news-feed">
       <article class="news-card">
@@ -142,7 +65,7 @@
       <article class="news-card">
         <span class="date">JUNE 2026</span>
         <h3>New Album Celebration</h3>
-        <p>Fans around the world continue celebrating <em>I Love You So F***ing Much</em> with special pop-up listening events.</p>
+        <p>Fans around the world continue celebrating <em>I Love You So F***ing Much</em> with special listening events.</p>
       </article>
     </section>
   </main>
@@ -151,7 +74,6 @@
     <p>&copy; 2026 Glass Animals Fan Site. Final Web Project[cite: 1].</p>
   </footer>
 
-  <!-- Interactive JavaScript -->
   <script>
     const lyrics = [
       '"Sometimes, all I think about is you..." - Heat Waves',
